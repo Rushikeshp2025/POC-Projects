@@ -5,6 +5,6 @@ import com.google.gwt.user.client.rpc.AsyncCallback;
 
 public interface PersonServiceAsync {
 	
-	public void savePersonDetailsToDatabase(PersonDetails person , AsyncCallback<PersonDetails> callback);
+	public void savePersonDetailsToDatabase(PersonDetails person , AsyncCallback<String> callback);
 
 }

@@ -15,11 +15,8 @@ import javax.servlet.ServletException;
 @Service
 public class PersonServiceImpl extends RemoteServiceServlet implements PersonService {
 
-
-
-
 	@Override
-	public PersonDetails savePersonDetailsToDatabase(PersonDetails person) {
+	public String savePersonDetailsToDatabase(PersonDetails person) {
 		// saving to database
 		 PersonDaoImpl personDaoImpl = new PersonDaoImpl();
 	     PersonData personDetailsDatabase = new PersonData();
@@ -28,14 +25,10 @@ public class PersonServiceImpl extends RemoteServiceServlet implements PersonSer
 		 personDetailsDatabase.setPersonAge(person.getPersonAge());
 		 try {
 		   Integer rowsAffected = personDaoImpl.savePersonData(personDetailsDatabase);
-			 System.out.println(rowsAffected);
 			 person.setPersonAge(rowsAffected);
 		 }catch (Exception e){
-			 PersonDetails personDetails = new PersonDetails();
-			 personDetails.setFirstName(e.toString());
-			 return personDetails;
+			 return "Failure";
 		 }
-
-		return person;
+		return "Success";
 	}
 }

@@ -1,0 +1,2 @@
+serviceClass: com.example.service.PersonService
+path: 0DF9328C2007978248A3CD205A4BC88B.gwt.rpc

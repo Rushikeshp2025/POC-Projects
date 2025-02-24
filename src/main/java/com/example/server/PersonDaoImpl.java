@@ -19,6 +19,11 @@ public class PersonDaoImpl implements PersonDao {
         this.sessionFactory = sessionFactory;
     }
 
+
+    public PersonDaoImpl(){
+        setup();
+    }
+
     public void setup(){
         Configuration config = new Configuration();
         config.setProperty("hibernate.connection.driver_class", "com.mysql.jdbc.Driver");

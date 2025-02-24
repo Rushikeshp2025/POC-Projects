@@ -7,6 +7,6 @@ import com.google.gwt.user.client.rpc.RemoteServiceRelativePath;
 @RemoteServiceRelativePath("person")
 public interface PersonService  extends RemoteService{
 	
-	public PersonDetails savePersonDetailsToDatabase(PersonDetails person);
+	public String savePersonDetailsToDatabase(PersonDetails person);
 
 }

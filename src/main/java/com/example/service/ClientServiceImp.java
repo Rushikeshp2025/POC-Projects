@@ -27,17 +27,15 @@ public class ClientServiceImp implements ClientInterface  {
 	@Override
 	public void sendDataToServer(PersonDetails personDetails) {
 	  // TODO Auto-generated method stub
-        personDetailsService.savePersonDetailsToDatabase(personDetails, new AsyncCallback<PersonDetails>() {
+        personDetailsService.savePersonDetailsToDatabase(personDetails, new AsyncCallback<String>() {
 			@Override
 			public void onFailure(Throwable caught) {
 				String resulString = caught.toString();
 				mainView.finalResult(resulString);
 			}
-
 			@Override
-			public void onSuccess(PersonDetails result) {
-                String resulString = result.toString();
-				mainView.finalResult(resulString);
+			public void onSuccess(String result) {
+				mainView.finalResult(result);
 			}
 		});
 
