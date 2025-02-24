@@ -24,8 +24,7 @@ public class PersonServiceImpl extends RemoteServiceServlet implements PersonSer
 		 personDetailsDatabase.setPersonFamilyName(person.getLastName());
 		 personDetailsDatabase.setPersonAge(person.getPersonAge());
 		 try {
-		   Integer rowsAffected = personDaoImpl.savePersonData(personDetailsDatabase);
-			 person.setPersonAge(rowsAffected);
+		     personDaoImpl.savePersonData(personDetailsDatabase);
 		 }catch (Exception e){
 			 return "Failure";
 		 }

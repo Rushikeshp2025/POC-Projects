@@ -37,12 +37,11 @@ public class PersonDaoImpl implements PersonDao {
     }
 
     @Override
-    public Integer savePersonData(PersonData personData) {
+    public void savePersonData(PersonData personData) {
         Session session = sessionFactory.openSession();
         session.beginTransaction();
         session.save(personData);
         session.getTransaction().commit();
         session.close();
-         return 1;
     }
 }
