@@ -1,0 +1,3 @@
+# Module myproject
+# RPC service class, partial path of RPC policy file
+com.example.service.PersonService, C5D06D3120C47958DB0A32CECD3C5206.gwt.rpc

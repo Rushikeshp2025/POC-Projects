@@ -1,0 +1,15 @@
+com\example\client\MainView$clickHandler.class
+com\example\server\SpringContextProvider.class
+com\example\server\PersonServiceImpl.class
+com\example\service\PersonServiceAsync.class
+com\example\server\AppConfig.class
+com\example\service\ClientServiceImp.class
+com\example\service\ClientServiceImp$1.class
+com\example\client\Myproject.class
+com\example\client\MainView.class
+com\example\service\ClientInterface.class
+com\example\server\PersonData.class
+com\example\service\PersonService.class
+com\example\server\PersonDao.class
+com\example\service\model\PersonDetails.class
+com\example\server\PersonDaoImpl.class
